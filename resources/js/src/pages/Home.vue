@@ -85,8 +85,7 @@ export default {
     ...mapActions('stream', ['getMedian']),
     medianService(){
       this.getMedian().then(response => {
-        console.log(response.data)
-        // this.median = response.data
+        this.median = Number(response.data.media).toFixed(2)
       })
     },
     init() {
