@@ -1,0 +1,29 @@
+body, html {
+    height: 100vh;
+    width: 100%;
+    font-family: "Roboto Light", Arial, sans-serif;
+}
+#template {
+    margin-top: 20px;
+    padding:0 20px
+}
+
+#template .header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#template > .header > .logo{
+    width: 100px;
+}
+
+#template .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.text-center{
+    text-align: center;
+}
