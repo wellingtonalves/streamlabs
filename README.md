@@ -67,3 +67,4 @@ The app runs on http://localhost:8000
 - If you have enabled caching before, all API calls will be cached.
 
 ## Screenshots
+![alt text](/public/images/1.png)
