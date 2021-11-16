@@ -67,4 +67,10 @@ The app runs on http://localhost:8000
 - If you have enabled caching before, all API calls will be cached.
 
 ## Screenshots
-![alt text](/public/images/1.png)
+<img src="/public/images/1.png" height="300">
+<img src="/public/images/2.png" height="300">
+<img src="/public/images/3.png" height="300">
+<img src="/public/images/4.png" height="300">
+<img src="/public/images/5.png" height="300">
+<img src="/public/images/6.png" height="300">
+<img src="/public/images/7.png" height="300">
