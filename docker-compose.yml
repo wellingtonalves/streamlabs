@@ -1,0 +1,74 @@
+version: "3"
+services:
+  db:
+    image: mariadb
+    restart: always
+    container_name: db-sl
+    environment:
+      MYSQL_ROOT_PASSWORD: 'sl_pass'
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+    command: --init-file /docker-entrypoint-initdb.d/init-db.sql
+    networks:
+      default:
+        ipv4_address: 172.16.1.2
+    ports:
+      - "3306:3306"
+  redis:
+    image: redis
+    restart: always
+    container_name: redis-sl
+    networks:
+      default:
+        ipv4_address: 172.16.1.3
+    ports:
+      - "6379:6379"
+  memcached-1:
+    image: memcached
+    restart: always
+    container_name: memcached-sl-1
+    networks:
+      default:
+        ipv4_address: 172.16.1.11
+    ports:
+      - "11211:11211"
+  memcached-2:
+    image: memcached
+    restart: always
+    container_name: memcached-sl-2
+    networks:
+      default:
+        ipv4_address: 172.16.1.12
+    ports:
+      - "11212:11211"
+  api:
+    depends_on:
+      - db
+      - redis
+      - memcached-1
+      - memcached-2
+    build:
+      args:
+        user: sl
+        uid: 1000
+        pass: sl
+      context: ./docker
+      dockerfile: Dockerfile
+    image: streamlabs
+    container_name: app-sl
+    entrypoint: /docker-entrypoint.sh
+    restart: always
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    ports:
+      - "8000:8000"
+    networks:
+      default:
+        ipv4_address: 172.16.1.5
+networks:
+  default:
+    ipam:
+      driver: bridge
+      config:
+        - subnet: 172.16.1.0/24
