@@ -3,7 +3,7 @@
     <v-row>
       <v-col md="10" offset="1">
         <h1 class="text-center">Streams</h1>
-        <p>Median of viewer {{}}</p>
+        <p class="text-center">Median of viewer {{median}}</p>
       </v-col>
       <v-col>
         <v-tabs

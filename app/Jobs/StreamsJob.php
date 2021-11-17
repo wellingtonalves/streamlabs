@@ -26,7 +26,7 @@ class StreamsJob implements ShouldQueue
      *
      * @return void
      */
-    public function __construct($max = 100, $type = 'update')
+    public function __construct($max = 1000, $type = 'update')
     {
         $this->max = $max;
         $this->type = $type;

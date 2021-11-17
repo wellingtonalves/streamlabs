@@ -57,7 +57,7 @@ docker-composer up --build
 ```
 
 ## Server
-The app runs on http://localhost:8000
+The app runs on https://streamlabs.reddes.com.br
 
 ## Here are some instructions
 - On the first screen you will need to log in your Twitch account.

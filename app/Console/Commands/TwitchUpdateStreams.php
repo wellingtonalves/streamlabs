@@ -37,6 +37,6 @@ class TwitchUpdateStreams extends Command
      */
     public function handle()
     {
-        StreamsJob::dispatch($max = 100, 'update');
+        StreamsJob::dispatch(1000, 'update');
     }
 }

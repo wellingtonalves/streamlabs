@@ -8,7 +8,7 @@ use App\Models\Stream;
 class Streams extends Model
 {
     /**
-     * @var $model Model
+     * @var Model $model
      * */
     public $model = Stream::class;
 

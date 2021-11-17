@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Api;
 
 use App\Core\Twitch\Manager as Twitch;
 use App\Http\Controllers\Controller;
+use App\Http\Traits\ResponseTrait;
 
 class StreamController extends Controller
 {
+    use ResponseTrait;
+
     /**
      * Get the Total amount of streams per game
      * @return \Illuminate\Http\JsonResponse|void
@@ -21,10 +24,7 @@ class StreamController extends Controller
 
             return response()->json($response);
         } catch (\Exception $exception) {
-            return response()->json([
-                'message' => 'Error on retrieve Total amount of streams per game',
-                'status' => 500
-            ], 500);
+            return $this->errorResponse('Error on retrieve Total amount of streams per game');
         }
     }
 
@@ -42,10 +42,7 @@ class StreamController extends Controller
 
             return response()->json($response);
         } catch (\Exception $exception) {
-            return response()->json([
-                'message' => 'Error on retrieve Highest viewer count stream per game',
-                'status' => 500
-            ], 500);
+            return $this->errorResponse('Error on retrieve Highest viewer count stream per game');
         }
     }
 
@@ -62,10 +59,7 @@ class StreamController extends Controller
 
             return response()->json($response);
         } catch (\Exception $exception) {
-            return response()->json([
-                'message' => 'Error on retrieve Median amount of viewers for all streams',
-                'status' => 500
-            ], 500);
+            return $this->errorResponse('Error on retrieve Median amount of viewers for all streams');
         }
     }
 
@@ -83,10 +77,7 @@ class StreamController extends Controller
 
             return response()->json($response);
         } catch (\Exception $exception) {
-            return response()->json([
-                'message' => 'Error on retrieve Streams with an odd number of viewers',
-                'status' => 500
-            ], 500);
+            return $this->errorResponse('Error on retrieve Streams with an odd number of viewers');
         }
     }
 
@@ -104,10 +95,7 @@ class StreamController extends Controller
 
             return response()->json($response);
         } catch (\Exception $exception) {
-            return response()->json([
-                'message' => 'Error on retrieve Streams with an even number of viewers',
-                'status' => 500
-            ], 500);
+            return $this->errorResponse('Error on retrieve Streams with an even number of viewers');
         }
     }
 
@@ -125,10 +113,7 @@ class StreamController extends Controller
 
             return response()->json($response);
         } catch (\Exception $exception) {
-            return response()->json([
-                'message' => 'Error on retrieve List of top 100 streams that can be sorted asc & desc',
-                'status' => 500
-            ], 500);
+            return $this->errorResponse('Error on retrieve List of top 100 streams that can be sorted asc & desc');
         }
     }
 
@@ -146,10 +131,7 @@ class StreamController extends Controller
 
             return response()->json($response);
         } catch (\Exception $exception) {
-            return response()->json([
-                'message' => 'Error on retrieve Streams with the same amount of viewers',
-                'status' => 500
-            ], 500);
+            return $this->errorResponse('Error on retrieve Streams with the same amount of viewers');
         }
     }
 }

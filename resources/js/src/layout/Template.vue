@@ -14,14 +14,6 @@
                   v-on="on"
               >
             </v-avatar>
-            <!--            <v-btn-->
-            <!--                color="primary"-->
-            <!--                v-bind="attrs"-->
-            <!--                v-on="on"-->
-            <!--                fab-->
-            <!--            >-->
-            <!--              {{ user.name.charAt(0) }}-->
-            <!--            </v-btn>-->
           </template>
           <v-list dense>
             <v-list-item>

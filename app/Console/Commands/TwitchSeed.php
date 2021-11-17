@@ -37,6 +37,6 @@ class TwitchSeed extends Command
      */
     public function handle()
     {
-        StreamsJob::dispatch($max = 1000, 'create');
+        StreamsJob::dispatch(1000, 'create');
     }
 }

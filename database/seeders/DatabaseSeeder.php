@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Jobs\StreamsJob;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Artisan;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,6 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        StreamsJob::dispatch($max = 1000, 'create');
+        Artisan::call('twitch:seed');
     }
 }

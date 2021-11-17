@@ -151,7 +151,7 @@ class Database implements Driver, Repository
      */
     private function sort($data, $column)
     {
-        $sort = request()->get('sort') ?? 'DESC';
+        $sort = request()->get('sort') ?? 'desc';
         $result = $sort == 'asc' ? $data->sortBy($column)->paginate(15)
             : $data->sortByDesc($column)->paginate(15);
 
