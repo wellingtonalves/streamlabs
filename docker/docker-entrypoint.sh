@@ -9,6 +9,7 @@ cp .env.example .env &&
 php artisan key:generate &&
 php artisan migrate:fresh &&
 php artisan passport:install &&
+php artisan passport:keys &&
 php artisan db:seed &&
 npm install &&
 npm run dev &&
