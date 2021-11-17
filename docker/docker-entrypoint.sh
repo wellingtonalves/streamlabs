@@ -12,6 +12,6 @@ php artisan passport:install &&
 php artisan passport:keys &&
 php artisan db:seed &&
 npm install &&
-#npm run dev &&
+npm run dev &&
 
 php artisan serve --host=0.0.0.0 --port=8000
