@@ -83,8 +83,8 @@ export default {
   },
   methods: {
     ...mapActions('stream', ['getMedian']),
-    medianService(){
-      this.getMedian().then(response => {
+    medianService(type = 'database'){
+      this.getMedian(type).then(response => {
         this.median = Number(response.data.media).toFixed(2)
       })
     },

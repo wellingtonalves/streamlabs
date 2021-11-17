@@ -6,8 +6,8 @@ export const getHighest = async ({}, {type = 'database', page = 1, sort = 'desc'
     return await api(`/api/streams-highest-per-game?type=${type}&page=${page}&sort=${sort}`)
 }
 
-export const getMedian = async ({}, {type = 'database', page = 1, sort = 'desc'}) => {
-    return await api(`/api/streams-median?type=${type}&page=${page}&sort=${sort}`)
+export const getMedian = async ({}, type = 'database') => {
+    return await api(`/api/streams-median?type=${type}`)
 }
 
 export const getOdd = async ({}, {type = 'database', page = 1, sort = 'desc'}) => {
