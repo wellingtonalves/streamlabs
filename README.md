@@ -2,30 +2,32 @@
 
 StreamStats is an application designed to display information about Twitch streams.
 
-## Stacks
-- PHP
-- VueJs
-- Redis (Jobs)
-- Memcached (Cache)
-- Realtime communication
-- MySql
+### StreamLabs Coding Assignment
+>  The coding assignment [here]( https://docs.google.com/document/d/1nmA9ZHtPtjFNNX2nknijkrDTz8KJXrUDkG496zFZW4A/edit).
+
+#### Requirements
+
+<small>All requirements have been implemented</small>
+
+#### Bonus Requirements
+
+<small>All bonus requirements have been implemented</small>
+
+## Live Demo
+The application is hosted in my own server in the following link:
+> https://streamlabs.reddes.com.br
+
+## Tech Stacks
+>**Backend** (PHP, Laravel, MySQL, Redis, Memcached, Events, Jobs, Cache)
+
+> **Frontend** (VueJs, Vuex, Vuetify, Pusher (Real-time))
+
+## Workflow
+![Screen Shot 2021-11-17 at 13 02 38](https://user-images.githubusercontent.com/4297908/142238588-592a4c03-3946-4b2b-9777-25cc9ce80bb9.png)
 
 
-## Requirements with Docker
-- Just Docker!
+## Installation
 
-## Requirements without Docker
-- php ˆ7.4
-- node 12
-- composer
-- memcached
-- redis
-- pusher
-- mySql
-- supervisor
-- cron
-
-## Environment
 You will need to fill in these keys before starting!
 
 [Twitch (get here)](https://dev.twitch.tv)
@@ -48,16 +50,11 @@ If you want to enable caching in the app it's here. Default: yes.
 CACHE_ENABLED=true
 ```
 
-## Installation
-
 Run Docker, Run!
 
 ```bash
 docker-composer up --build
 ```
-
-## Server
-The app runs on https://streamlabs.reddes.com.br
 
 ## Here are some instructions
 - On the first screen you will need to log in your Twitch account.
@@ -67,10 +64,19 @@ The app runs on https://streamlabs.reddes.com.br
 - If you have enabled caching before, all API calls will be cached.
 
 ## Screenshots
-<img src="/public/images/1.png" height="300">
-<img src="/public/images/2.png" height="300">
-<img src="/public/images/3.png" height="300">
-<img src="/public/images/4.png" height="300">
-<img src="/public/images/5.png" height="300">
-<img src="/public/images/6.png" height="300">
+
+Total per game          |  Highest
+:-------------------------:|:-------------------------:
+<img src="/public/images/1.png" height="300"> | <img src="/public/images/2.png" height="300">
+
+Odd          |  Even
+:-------------------------:|:-------------------------:
+<img src="/public/images/3.png" height="300"> | <img src="/public/images/4.png" height="300">
+
+Same amount          |  Top 100
+:-------------------------:|:-------------------------:
+<img src="/public/images/5.png" height="300"> | <img src="/public/images/6.png" height="300">
+
+
+### Mobile
 <img src="/public/images/7.png" height="300">
