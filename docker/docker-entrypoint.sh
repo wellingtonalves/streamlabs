@@ -11,10 +11,6 @@ php artisan migrate:fresh &&
 php artisan passport:install &&
 php artisan db:seed &&
 npm install &&
-#npm run dev &&
-
-echo "########################################################" &&
-echo " User: user@streamlabs.com - Senha: password            " &&
-echo "########################################################" &&
+npm run dev &&
 
 php artisan serve --host=0.0.0.0 --port=8000
