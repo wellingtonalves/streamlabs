@@ -2,7 +2,6 @@
 
 namespace App\Core\Support;
 
-
 class Helpers
 {
 

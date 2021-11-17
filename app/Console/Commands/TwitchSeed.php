@@ -3,12 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Jobs\StreamsJob;
-use App\Models\Stream;
 use Illuminate\Console\Command;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
-use romanzipp\Twitch\Twitch;
 
 class TwitchSeed extends Command
 {

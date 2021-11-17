@@ -16,7 +16,6 @@ class Controller extends BaseController
      */
     public function getTypeToDisplayInfo()
     {
-
         return request()->get('type') ?? 'database';
     }
 }

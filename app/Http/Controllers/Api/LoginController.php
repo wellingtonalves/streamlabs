@@ -20,17 +20,11 @@ class LoginController extends Controller
                 'user' => Auth::user()
             ]);
         } catch (\Exception $exception) {
-            response()->json([
+            return response()->json([
                 'message' => 'Error on get user',
                 'status' => 500
             ], 500);
         }
-    }
-
-    public function logout()
-    {
-        Auth::logout();
-        return redirect()->intended('/login');
     }
 
     /**
@@ -44,7 +38,7 @@ class LoginController extends Controller
 
     /**
      * Get user info from provider and authenticate
-     * @return \Illuminate\Http\RedirectResponse|void
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function callback()
     {
@@ -65,9 +59,8 @@ class LoginController extends Controller
             $token = $userLocal->createToken('Twitch')->accessToken;
 
             return response()->redirectTo('/login?token=' . $token);
-
         } catch (\Exception $exception) {
-            response()->json([
+            return response()->json([
                 'message' => 'Error on authenticate user',
                 'status' => 500
             ], 500);
@@ -85,7 +78,7 @@ class LoginController extends Controller
                 'message' => 'User revoked'
             ]);
         } catch (\Exception $exception) {
-            response()->json([
+            return response()->json([
                 'message' => 'Error on revoke user',
                 'status' => 500
             ], 500);

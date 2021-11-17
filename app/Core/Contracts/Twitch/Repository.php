@@ -2,9 +2,6 @@
 
 namespace App\Core\Contracts\Twitch;
 
-
-use App\Core\Twitch\Model;
-
 interface Repository
 {
     /**
