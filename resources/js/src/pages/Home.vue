@@ -3,7 +3,7 @@
     <v-row>
       <v-col md="10" offset="1">
         <h1 class="text-center">Streams</h1>
-        <p class="text-center">Median of viewer {{median}}</p>
+        <p class="text-center">Median of viewer {{ median }}</p>
       </v-col>
       <v-col>
         <v-tabs
@@ -77,25 +77,21 @@ export default {
     const vm = this;
     this.medianService()
     this.$observer('public', 'App\\Events\\StreamsUpdate', function () {
-      console.log('updating...')
-      vm.init()
+      vm.update()
     });
   },
   methods: {
     ...mapActions('stream', ['getMedian']),
-    medianService(type = 'database'){
+    medianService(type = 'database') {
       this.getMedian(type).then(response => {
         this.median = Number(response.data.media).toFixed(2)
       })
     },
-    init() {
+    update() {
       this.medianService()
-      this.$refs.amount_comp.streamService()
-      this.$refs.highest_comp.streamService()
-      this.$refs.odd_comp.streamService()
-      this.$refs.even_comp.streamService()
-      this.$refs.same_comp.streamService()
-      this.$refs.top_comp.streamService()
+      const refs = Object.keys(this.$refs)
+      const vm = this
+      refs.forEach(item => vm.$refs[item].streamService())
     }
   }
 }

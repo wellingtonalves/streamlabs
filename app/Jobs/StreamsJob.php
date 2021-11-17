@@ -97,6 +97,8 @@ class StreamsJob implements ShouldQueue
     private function update($stream)
     {
         try {
+            $data = $this->transform($stream);
+            unset($data['id']);
             DB::table('streams')->where('id', $stream->id)->update($this->transform($stream));
 
         } catch (\Exception $exception) {
