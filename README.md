@@ -22,7 +22,11 @@ The application is hosted in my own server in the following link:
 
 > **Frontend** (VueJs, Vuex, Vuetify, Pusher (Real-time))
 
+## Structure
+![Screen Shot 2021-11-17 at 14 32 02](https://user-images.githubusercontent.com/4297908/142251917-8d30964b-36b9-4590-bf86-0c7975d14214.png)
+
 ## Workflow
+
 ![Screen Shot 2021-11-17 at 13 02 38](https://user-images.githubusercontent.com/4297908/142238588-592a4c03-3946-4b2b-9777-25cc9ce80bb9.png)
 
 
