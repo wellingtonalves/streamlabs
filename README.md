@@ -1,6 +1,6 @@
 # Top StreamStats app
+<img src="https://cdn.streamlabs.com/static/imgs/streamlabs-logos/dark/streamlabs-logo-horizontal.svg" width="450"/>
 
-StreamStats is an application designed to display information about Twitch streams.
 
 ### StreamLabs Coding Assignment
 >  The coding assignment [here]( https://docs.google.com/document/d/1nmA9ZHtPtjFNNX2nknijkrDTz8KJXrUDkG496zFZW4A/edit).
