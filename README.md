@@ -15,7 +15,7 @@
 
 ## Live Demo
 The application is hosted in my own server in the following link:
-> https://streamlabs.reddes.com.br
+> removed
 
 ## Tech Stacks
 >**Backend** (PHP, Laravel, MySQL, Redis, Memcached, Events, Jobs, Cache)
